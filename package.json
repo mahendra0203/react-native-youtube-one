@@ -1,0 +1,76 @@
+{
+  "_args": [
+    [
+      "git+https://github.com/onechampionship/rn-youtube-player.git",
+      "/Users/mahendra/code/onechampionship-rn"
+    ]
+  ],
+  "_from": "git+https://github.com/onechampionship/rn-youtube-player.git",
+  "_id": "react-native-youtube@git+https://github.com/onechampionship/rn-youtube-player.git#4f452f37c892adaee6b39c38034e2b5aae698d79",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/react-native-youtube",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/onechampionship/rn-youtube-player.git",
+    "rawSpec": "git+https://github.com/onechampionship/rn-youtube-player.git",
+    "saveSpec": "git+https://github.com/onechampionship/rn-youtube-player.git",
+    "fetchSpec": "https://github.com/onechampionship/rn-youtube-player.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/onechampionship/rn-youtube-player.git#4f452f37c892adaee6b39c38034e2b5aae698d79",
+  "_spec": "git+https://github.com/onechampionship/rn-youtube-player.git",
+  "_where": "/Users/mahendra/code/onechampionship-rn",
+  "author": {
+    "name": "Param Aggarwal"
+  },
+  "bugs": {
+    "url": "https://github.com/inProgress-team/react-native-youtube/issues"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.0"
+  },
+  "description": "A <YouTube/> component for React Native.",
+  "devDependencies": {
+    "prettier": "^1.10.2"
+  },
+  "homepage": "https://github.com/inProgress-team/react-native-youtube#readme",
+  "keywords": [
+    "youtube",
+    "react",
+    "react-native"
+  ],
+  "license": "MIT",
+  "main": "main.js",
+  "name": "react-native-youtube",
+  "peerDependencies": {
+    "react-native": ">=0.37"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "printWidth": 100
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inProgress-team/react-native-youtube.git"
+  },
+  "rnpm": {
+    "android": {
+      "packageInstance": "new ReactNativeYouTube()"
+    },
+    "assets": [
+      "assets"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.1.0"
+}
