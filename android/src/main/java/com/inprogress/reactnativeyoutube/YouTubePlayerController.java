@@ -167,7 +167,11 @@ public class YouTubePlayerController implements
     }
 
     public int getCurrentTime() {
-      return mYouTubePlayer.getCurrentTimeMillis() / 1000;
+      try{
+        return mYouTubePlayer.getCurrentTimeMillis() / 1000;
+      }catch(Exception e){
+        return 0;
+      }
     }
 
     public int getDuration() {
