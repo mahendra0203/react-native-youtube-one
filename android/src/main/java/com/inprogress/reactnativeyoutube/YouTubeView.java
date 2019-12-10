@@ -45,7 +45,7 @@ public class YouTubeView extends FrameLayout {
     protected void onAttachedToWindow() {
         if (!mHasSavedInstance) {
             FragmentManager fragmentManager = getReactContext().getCurrentActivity().getFragmentManager();
-            fragmentManager.beginTransaction().add(getId(), mVideoFragment).commit();
+            fragmentManager.beginTransaction().add(getId(), mVideoFragment).commitAllowingStateLoss();
         }
         super.onAttachedToWindow();
     }
@@ -78,7 +78,11 @@ public class YouTubeView extends FrameLayout {
     }
 
     public int getCurrentTime() {
-        return mYouTubeController.getCurrentTime();
+      if(mYouTubeController != null){
+       return mYouTubeController.getCurrentTime();
+      }else{
+       return 0;
+      }
     }
 
     public int getDuration() {
@@ -174,6 +178,7 @@ public class YouTubeView extends FrameLayout {
     }
 
     public void setPlay(boolean bool) {
+      if(mYouTubeController != null){
         mYouTubeController.setPlay(bool);
     }
 
