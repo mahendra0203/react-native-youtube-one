@@ -178,7 +178,7 @@ public class YouTubeView extends FrameLayout {
     }
 
     public void setPlay(boolean bool) {
-      if(mYouTubeController != null){
+      if(mYouTubeController != null)
         mYouTubeController.setPlay(bool);
     }
 
