@@ -274,8 +274,11 @@ public class YouTubePlayerController implements
     }
 
     private void updateFullscreen() {
+      try{
         reLayout(mYouTubeView);
         mYouTubePlayer.setFullscreen(mFullscreen);
+      }catch(Exception e){
+      }
     }
 
     private void updateShowFullscreenButton() {
@@ -403,8 +406,11 @@ public class YouTubePlayerController implements
     public void setPlay(boolean play) {
         mPlay = play;
         if (isLoaded()) {
+          try{
             if (isPlay()) mYouTubePlayer.play();
             else mYouTubePlayer.pause();
+          }catch (Exception e){
+          }
         }
     }
 

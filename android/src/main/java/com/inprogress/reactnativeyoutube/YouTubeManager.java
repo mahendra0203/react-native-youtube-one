@@ -13,7 +13,7 @@ import com.facebook.react.uimanager.annotations.ReactProp;
 import java.util.Map;
 
 
-public class YouTubeManager extends SimpleViewManager<YouTubeView>  {
+public class YouTubeManager extends SimpleViewManager<YouTubeView> {
 
     private static final int COMMAND_SEEK_TO = 1;
     private static final int COMMAND_NEXT_VIDEO = 2;
