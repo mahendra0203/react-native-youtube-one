@@ -701,12 +701,14 @@ NSString static *const kYTPlayerSyndicationRegexPattern = @"^https://tpc.googles
     // This must not be empty so we can render a '{}' in the output JSON
     [playerParams setValue:[[NSDictionary alloc] init] forKey:@"playerVars"];
   }
-
-  // Remove the existing webView to reset any state
+    
+    // Remove the existing webView to reset any state
   [self.webView removeFromSuperview];
   _webView = [self createNewWebView];
+  _webView.opaque = false;
+  _webView.backgroundColor = [UIColor blackColor];
   [self addSubview:self.webView];
-
+    
   NSError *error = nil;
   NSString *path = [[NSBundle bundleForClass:[YTPlayerView class]] pathForResource:@"YTPlayerView-iframe-player"
                                                    ofType:@"html"
@@ -855,6 +857,8 @@ NSString static *const kYTPlayerSyndicationRegexPattern = @"^https://tpc.googles
 
 - (void)setWebView:(UIWebView *)webView {
   _webView = webView;
+    _webView.opaque = false;
+    _webView.backgroundColor = [UIColor blackColor];
 }
 
 - (UIWebView *)createNewWebView {
@@ -862,14 +866,15 @@ NSString static *const kYTPlayerSyndicationRegexPattern = @"^https://tpc.googles
     webView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     webView.scrollView.scrollEnabled = NO;
     webView.scrollView.bounces = NO;
-
-    if ([self.delegate respondsToSelector:@selector(playerViewPreferredWebViewBackgroundColor:)]) {
-        webView.backgroundColor = [self.delegate playerViewPreferredWebViewBackgroundColor:self];
-        if (webView.backgroundColor == [UIColor clearColor]) {
-            webView.opaque = NO;
-        }
-    }
-
+   
+//    if ([self.delegate respondsToSelector:@selector(playerViewPreferredWebViewBackgroundColor:)]) {
+//        webView.backgroundColor = [self.delegate playerViewPreferredWebViewBackgroundColor:self];
+//        if (webView.backgroundColor == [UIColor clearColor]) {
+//            webView.opaque = NO;
+//        }
+//    }
+    webView.opaque = false;
+    webView.backgroundColor = [UIColor blackColor];
     return webView;
 }
 
